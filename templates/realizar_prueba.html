@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realizar prueba</title>
+</head>
+
+<body>
+    <div>
+        <form method="post"  enctype="multipart/form-data">
+            {% csrf_token %}
+
+            <button type="button" id="inicio">Comenzar</button>
+            <br><br>
+
+            <div id="preguntas" hidden>
+                <label>Inrgese sus nombres y apellidos: </label>
+                <input type="text" name="paciente">
+                <br>
+
+
+                <label>Fecha de nacimiento</label>
+                <input type="date" name="fecha_nacimiento">
+                <br>
+
+
+                <label>¿Te has sentido triste en este dia?</label>
+                <select name="respuesta1">
+                    <option value="1">Uno</option>
+                    <option value="2">Dos</option>
+                    <option value="3">Tres</option>
+                    <option value="4">Cuatro</option>
+                </select>
+                <br>
+
+                <label>¿Te has seindo pesimo en este dia?</label>
+                <select name="respuesta2">
+                    <option value="1">Uno</option>
+                    <option value="2">Dos</option>
+                    <option value="3">Tres</option>
+                    <option value="4">Cuatro</option>
+                </select>
+                <br>
+
+                <label>¿Has sentido que has fracasado en lo que te has propuesto?</label>
+                <select name="respuesta3">
+                    <option value="1">Uno</option>
+                    <option value="2">Dos</option>
+                    <option value="3">Tres</option>
+                    <option value="4">Cuatro</option>
+                </select>
+                <br>
+                <label>¿Sientes que has perdido la sensacion de placer?</label>
+                <select name="respuesta4">
+                    <option value="1">Uno</option>
+                    <option value="2">Dos</option>
+                    <option value="3">Tres</option>
+                    <option value="4">Cuatro</option>
+                </select>
+                <br>
+                <label>¿Sientes culpa por algo?</label>
+                <select name="respuesta5">
+                    <option value="1">Uno</option>
+                    <option value="2">Dos</option>
+                    <option value="3">Tres</option>
+                    <option value="4">Cuatro</option>
+                </select>
+                <br>
+                <label>¿Has sentido un sentimiento de castigo?</label>
+                <select name="respuesta6">
+                    <option value="1">Uno</option>
+                    <option value="2">Dos</option>
+                    <option value="3">Tres</option>
+                    <option value="4">Cuatro</option>
+                </select>
+                <br>
+                <label>¿Te sientes disconforme con tu vida actualmente?</label>
+                <select name="respuesta7">
+                    <option value="1">Uno</option>
+                    <option value="2">Dos</option>
+                    <option value="3">Tres</option>
+                    <option value="4">Cuatro</option>
+                </select>
+                <br>
+                <label>¿Qué crees que deberias mejorar con respecto a tu vida?</label>
+                <select name="respuesta8">
+                    <option value="1">Uno</option>
+                    <option value="2">Dos</option>
+                    <option value="3">Tres</option>
+                    <option value="4">Cuatro</option>
+                </select>
+                <br>
+                <label>¿Has pensado alguna vez en el suicidio?</label>
+                <select name="respuesta9">
+                    <option value="1">Uno</option>
+                    <option value="2">Dos</option>
+                    <option value="3">Tres</option>
+                    <option value="4">Cuatro</option>
+                </select>
+                <br>
+                <label>¿Has llorado ultimamente (15 dias)?</label>
+                <select name="respuesta10">
+                    <option value="1">Uno</option>
+                    <option value="2">Dos</option>
+                    <option value="3">Tres</option>
+                    <option value="4">Cuatro</option>
+                </select>
+                <br>
+                <label>¿Te sientes agitado en situaciones incomodas?</label>
+                <select name="respuesta11">
+                    <option value="1">Uno</option>
+                    <option value="2">Dos</option>
+                    <option value="3">Tres</option>
+                    <option value="4">Cuatro</option>
+                </select>
+                <br>
+                <label>¿Has perdido el interes en tus estudios?</label>
+                <select name="respuesta12">
+                    <option value="1">Uno</option>
+                    <option value="2">Dos</option>
+                    <option value="3">Tres</option>
+                    <option value="4">Cuatro</option>
+                </select>
+                <br>
+                <label>¿Sientes dudas al tomar una decisión?</label>
+                <select name="respuesta13">
+                    <option value="1">Uno</option>
+                    <option value="2">Dos</option>
+                    <option value="3">Tres</option>
+                    <option value="4">Cuatro</option>
+                </select>
+                <br>
+                <label>¿Sientes que la energia con las que haces tus tareas a disminuido?</label>
+                <select name="respuesta14">
+                    <option value="1">Uno</option>
+                    <option value="2">Dos</option>
+                    <option value="3">Tres</option>
+                    <option value="4">Cuatro</option>
+                </select>
+                <br>
+                <label>¿Tienes problemas ara dormir?</label>
+                <select name="respuesta15">
+                    <option value="1">Uno</option>
+                    <option value="2">Dos</option>
+                    <option value="3">Tres</option>
+                    <option value="4">Cuatro</option>
+                </select>
+                <br>
+                <label>¿Te sientes irritado rapidamente (socialmente)?</label>
+                <select name="respuesta16">
+                    <option value="1">Uno</option>
+                    <option value="2">Dos</option>
+                    <option value="3">Tres</option>
+                    <option value="4">Cuatro</option>
+                </select>
+                <br>
+                <label>¿Sientes que ha cambiado tu apetito?</label>
+                <select name="respuesta17">
+                    <option value="1">Uno</option>
+                    <option value="2">Dos</option>
+                    <option value="3">Tres</option>
+                    <option value="4">Cuatro</option>
+                </select>
+                <br>
+                <label>¿Sientes dificultad al consetrarte?</label>
+                <select name="respuesta18">
+                    <option value="1">Uno</option>
+                    <option value="2">Dos</option>
+                    <option value="3">Tres</option>
+                    <option value="4">Cuatro</option>
+                </select>
+                <br>
+                <label>En tu dia a dia ¿sientes cansancio al realizar cualquier tarea?</label>
+                <select name="respuesta19">
+                    <option value="1">Uno</option>
+                    <option value="2">Dos</option>
+                    <option value="3">Tres</option>
+                    <option value="4">Cuatro</option>
+                </select>
+                <br>
+                <label>¿Has perdido el interes en el sexo (Relaciones sexuales)?</label>
+                <select name="respuesta20">
+                    <option value="1">Uno</option>
+                    <option value="2">Dos</option>
+                    <option value="3">Tres</option>
+                    <option value="4">Cuatro</option>
+                </select>
+                <br>
+                <video id="video" autoplay></video>
+               
+            </div>
+
+            <input hidden name="respuesta_emociones" value="">
+           
+           
+            <button type="button" id="videoListo"  name="videoListo">Listo</button>
+            
+            <input name="respuesta_video" type="file" id="id_respuesta_video" hidden>
+
+            <button type="submit" hidden id="submit"  name="submit">Guardar</button>
+            <script>
+
+let video = document.querySelector("#video");
+
+
+document.querySelector("#videoListo").addEventListener("click", function(ev){
+    navigator.mediaDevices.getUserMedia({audio: false, video:true})
+    .then(record)
+    .catch(err => console.log(err));
+    document.getElementById("preguntas").hidden = false ;
+
+})
+
+
+
+document.querySelector("#inicio").addEventListener("click", function(ev){
+    navigator.mediaDevices.getUserMedia({audio: false, video:true})
+    .then(record)
+    .catch(err => console.log(err));
+    document.getElementById("preguntas").hidden = false ;
+    alert("El test inicio");
+})
+
+let chunks = [];
+
+function record(stream){
+    video.srcObject = stream;
+
+    let mediaRecorder = new MediaRecorder(stream,{
+        mimeType: 'video/webm;codecs=h264'
+    });
+
+  
+    //comenzar a grabar
+    mediaRecorder.start();
+
+    mediaRecorder.ondataavailable = function(e){
+        chunks.push(e.data);
+        console.log(e.data);
+    }
+
+    mediaRecorder.onstop = function(){
+        //crear archivo largo para almacenar video
+        let blob = new Blob(chunks, {type: "video/webm"});
+        chunks = [];
+
+        download(blob);
+
+    }
+    
+    document.querySelector("#videoListo").addEventListener("click", function(ev){
+        alert("Guarde el video generado y subalo a continuacion...");
+        mediaRecorder.stop();
+        document.getElementById("submit").hidden = false;
+        document.getElementById("id_respuesta_video").hidden = false;
+        document.getElementById("videoListo").hidden = true;
+
+})
+    
+    
+
+    
+
+}
+
+
+function download(blob){
+    let link = document.createElement("a");
+    link.href = window.URL.createObjectURL(blob);
+    link.style.display = 'none';
+    link.target = "_blank"
+    document.getElementById("video").srcObject = blob;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+}
+            </script>
+        </form>
+    </div>
+
+
+
+
+</body>
+
+</html>
